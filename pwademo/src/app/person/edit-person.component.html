@@ -1,0 +1,23 @@
+<div class="col-xs-12 card">
+  <div class="card-header">
+    Edit item
+  </div>
+  <div class="card-content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" id="name" name="name" autocomplete="off" formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label for="identifier">Phone</label>
+        <input class="form-control" type="text" id="phoneNumber" name="phoneNumber" formControlName="phoneNumber" />
+      </div>
+      <div class="form-group">
+        <label for="identifier">Address</label>
+        <input class="form-control" type="text" id="address" name="address" formControlName="address" />
+      </div>
+
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

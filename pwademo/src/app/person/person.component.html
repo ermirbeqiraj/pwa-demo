@@ -1,0 +1,42 @@
+<div class="col-xs-12 card">
+  <div class="card-header">
+    People list
+  </div>
+  <div class="card-content">
+    <p>
+      <a routerLink="/add-person">Add a new record</a>
+    </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Id
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Phone
+          </th>
+          <th>
+            Address
+          </th>
+          <th>
+            &nbsp;
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of people">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.phoneNumber}}</td>
+          <td>{{item.address}}</td>
+          <td>
+            <a routerLink="/edit-person/{{item.id}}">Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
