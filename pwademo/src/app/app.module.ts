@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { PersonComponent } from './person/person.component';
 import { EditPersonComponent } from './person/edit-person.component';
 import { AddPersonComponent } from './person/add-person.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { AddPersonComponent } from './person/add-person.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
