@@ -27,7 +27,7 @@
     {
       "name": "pwa-demo-api",
       "urls": [
-        "https://localhost://5001/api/**"
+        "https://localhost:5001/api/**"
       ],
       "cacheConfig": {
         "strategy": "freshness",
